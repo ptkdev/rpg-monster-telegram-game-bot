@@ -1,5 +1,5 @@
 {
-	"projectName": "ptkdev-boilerplate/node-telegram-bot-boilerplate",
+	"projectName": "ptkdev/rpg-monster-telegram-game-bot",
 	"projectOwner": "ptkdev",
 	"repoType": "github",
 	"repoHost": "https://github.com",
@@ -22,23 +22,15 @@
 			]
 		},
 		{
-			"login": "edge33",
-			"name": "Francesco Maida",
-			"avatar_url": "https://avatars1.githubusercontent.com/u/5662280?v=4",
-			"profile": "https://edge33.github.io",
+			"login": "AliShadman95",
+			"name": "Alì Shadman",
+			"avatar_url": "https://avatars1.githubusercontent.com/u/50172746?v=4",
+			"profile": "",
 			"contributions": [
 				"code",
-				"doc"
-			]
-		},
-		{
-			"login": "verhyppo",
-			"name": "Veronica Di Giorgio",
-			"avatar_url": "https://avatars.githubusercontent.com/u/3539384?v=4",
-			"profile": "https://verhyppo.github.io",
-			"contributions": [
-				"infra",
-				"doc"
+				"translation",
+				"doc",
+				"bug"
 			]
 		}
 	],

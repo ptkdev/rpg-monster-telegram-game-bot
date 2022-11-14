@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"module": "CommonJS",
-		"target": "ES6",
+		"target": "ES2019",
 		"sourceMap": true,
 		"outDir": "./dist/",
 		"lib": ["es2017", "es7", "es6", "DOM"],
@@ -9,9 +9,10 @@
 		"resolveJsonModule": true,
 		"moduleResolution": "node",
 		"esModuleInterop": true,
-		"noImplicitAny": true,
+		"noImplicitAny": false,
 		"noImplicitThis": true,
 		"declaration": false,
+		"skipLibCheck": true,
 		"allowJs": true,
 		"strict": true,
 		"strictNullChecks": true,
@@ -21,6 +22,7 @@
 			"@databases/*": ["./database/*"],
 			"@translations/*": ["./app/translations/*"],
 			"@configs/*": ["./app/configs/*"],
+			"@routes/*": ["./app/routes/*"],
 			"@app/*": ["./app/*"]
 		},
 		"typeRoots": ["app/**/types", "node_modules/@types"],
@@ -30,5 +32,5 @@
 		]
 	},
 	"include": ["app/**/*"],
-	"exclude": ["node_modules/*", "dist/*", "scripts/*"]
+	"exclude": ["node_modules/*", "dist/*", "scripts/*", "examples/*"]
 }

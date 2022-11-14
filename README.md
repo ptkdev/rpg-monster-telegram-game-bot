@@ -1,18 +1,16 @@
-# 🤖 node-telegram-bot-boilerplate
+# 🤖 rpg-monster-telegram-game-bot
 
 <!-- all-shields/header-badges:START -->
 
-[![v1.0.20211121](https://img.shields.io/badge/version-v1.0.20211121-lightgray.svg?style=flat&logo=)](https://github.com/ptkdev-boilerplate/node-telegram-bot-boilerplate/blob/main/CHANGELOG.md) [![](https://img.shields.io/npm/v/@ptkdev/node-telegram-bot-boilerplate?color=CC3534&logo=npm)](https://www.npmjs.com/package/@ptkdev/node-telegram-bot-boilerplate) [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat&logo=license)](https://github.com/ptkdev-boilerplate/node-telegram-bot-boilerplate/blob/main/LICENSE.md) [![Language: TypeScript](https://img.shields.io/badge/language-typescript-blue.svg?style=flat&logo=typescript)](https://www.typescriptlang.org/) [![ECMAScript: 2019](https://img.shields.io/badge/ES-9-F7DF1E.svg?style=flat&logo=javascript)](https://github.com/tc39/ecma262) [![Discord Server](https://discordapp.com/api/guilds/383373985666301975/embed.png)](https://discord.ptkdev.io)
+[![v0.0.1](https://img.shields.io/badge/version-v0.0.1-lightgray.svg?style=flat&logo=)](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/CHANGELOG.md) [![](https://img.shields.io/npm/v/@ptkdev/rpg-monster-telegram-game-bot?color=CC3534&logo=npm)](https://www.npmjs.com/package/@ptkdev/rpg-monster-telegram-game-bot) [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat&logo=license)](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/LICENSE.md) [![Language: TypeScript](https://img.shields.io/badge/language-typescript-blue.svg?style=flat&logo=typescript)](https://www.typescriptlang.org/) [![Framework: Grammy](https://img.shields.io/badge/powered%20by-grammy-009dca.svg?style=flat&logo=telegram)](https://grammy.dev/) [![ECMAScript: 2019](https://img.shields.io/badge/ES-9-F7DF1E.svg?style=flat&logo=javascript)](https://github.com/tc39/ecma262) [![Discord Server](https://discordapp.com/api/guilds/383373985666301975/embed.png)](https://discord.ptkdev.io)
 
 <!-- all-shields/header-badges:END -->
 
-Create your telegram bot with this friendly boilerplate. Use this repository as a template for your bot
-
-This is a [github template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/), you can fork it or [use it as a template](https://github.com/ptkdev-boilerplate/node-telegram-bot-boilerplate/generate) to start a new project with this repository as hello-world. I hate to start a new project with an empty template, often I miss correct configuration, readme instruction or I need samples of code. Use this repository as a template to solve this problem.
+RPG Monster Game Bot for Telegram Groups, play with friends!
 
 ## 🎁 Support: Donate
 
-> This project is **free**, **open source** and I try to provide excellent **free support**. Why donate? I work on this project for several hours in my spare time and try to keep it up to date and working. **THANK YOU!**
+> This project is **free**, **open source** and I try to provide excellent **free support**. Why donate? I work on this project several hours in my spare time and try to keep it up to date and working. **THANK YOU!**
 
 <!-- all-shields/sponsors-badges:START -->
 
@@ -23,106 +21,69 @@ This is a [github template](https://github.blog/2019-06-06-generate-new-reposito
 ## 📎 Menu
 
 -   💡 [Features](#-features)
--   📚 [Documentation](#-documentation)
+-   👔 [Screenshot](#-screenshot)
+-   🚀 [How to use](#-installation)
+-   🎮 [How to play](#-how-to-play)
 -   🔨 [Developer Mode](#-developer-mode)
 -   -   🏁 [Run Project](#-run-project)
 -   -   💾 [Setup Project](#-setup-project)
 -   -   🚀 [Deploy](#-deploy)
+-   📚 [Documentation](#-documentation)
 -   👨‍💻 [Contributing](#-contributing)
--   🐛 [Known Bugs](https://github.com/ptkdev-boilerplate/node-telegram-bot-boilerplate/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
+-   🐛 [Known Bugs](https://github.com/ptkdev/rpg-monster-telegram-game-bot/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
 -   🍻 Community:
--   <img src="https://raw.githubusercontent.com/ptkdev-boilerplate/node-telegram-bot-boilerplate/main/.github/assets/social_telegram.png" height="18px"> Telegram ([🇬🇧 English](http://t.me/ptkdev_support) | [🇮🇹 Italian](http://t.me/ptkdev_support_italian))
--   <img src="https://raw.githubusercontent.com/ptkdev-boilerplate/node-telegram-bot-boilerplate/main/.github/assets/social_discord.png" height="18px"> [Discord](http://discord.ptkdev.io) ([🇬🇧 English](https://discord.gg/jqUSGPKdmA) | [🇮🇹 Italian](https://discord.gg/SJFcbvG6RU) | [🇵🇱 Polish](https://discord.gg/25vg4VFhb7))
--   <img src="https://raw.githubusercontent.com/ptkdev-boilerplate/node-telegram-bot-boilerplate/main/.github/assets/social_twitter.png" height="18px"> [Twitter](http://twitter.com/ptkdevio)
+    -   <img src="https://raw.githubusercontent.com/ptkdev/rpg-monster-telegram-game-bot/main/.github/assets/social_telegram.png" height="18px"> Telegram ([🇬🇧 English](https://t.me/QuizQuickAnswerGroup) | [🇮🇹 Italian](https://t.me/QuizQuickAnswerGroupITA))
 
 ## 💡 Features
 
 -   [✔️] Easy to use
 -   [✔️] MIT License
--   [✔️] Make telegram bot with node
--   [✔️] Friendly boilerplate + Github templates
--   [✔️] Typescript + TSPaths preconfigured
--   [✔️] Userfriendly folders tree
--   [✔️] Prettify and ESLint preconfigured
--   [✔️] all-contributors-cli and all-shields-cli preconfigured
--   [✔️] JEST Test preconfigured
--   [✔️] Full async code
--   [✔️] Github and Vscode dotfiles preconfigured
--   [✔️] Translations: 🇬🇧 🇮🇹 🇵🇱 (Help me ❤️)
+-   [✔️] Powered by Grammy Telegram API Framework
+-   [✔️] RPG Monster Game Bot for Telegram Groups, play with friends!
+
+## 👔 Screenshot
+
+[![rpg-monster-telegram-game-bot](https://raw.githubusercontent.com/ptkdev/rpg-monster-telegram-game-bot/main/.github/assets/screenshot.png)](https://raw.githubusercontent.com/ptkdev/rpg-monster-telegram-game-bot/main/.github/assets/screenshot.png)
+
+## 🚀 Installation
+
+1. Add [@RPGMonsterBot](https://t.me/RPGMonsterBot) to your Telegram group
+2. Make **@RPGMonsterBot** admin of your group
+3. Run `/start` or `/start@RPGMonsterBot`
+4. Follow instructions and Play with friends!
+
+## 🎮 How to play
+
+1. TODO
+
+## ⏱ Official Group
+
+If you have no telegram groups of friends you can play in the official one, you will find new friends and kind people:
+
+-   [🇬🇧 English](https://t.me/QuizQuickAnswerGroup)
+-   [🇮🇹 Italian](https://t.me/QuizQuickAnswerGroupITA)
 
 ## 🔨 Developer Mode
 
-### 🏁 Run Project
+#### 🏁 Run Project
 
-1. Clone this repository or download [nightly](https://github.com/ptkdev-boilerplate/node-telegram-bot-boilerplate/archive/nightly.zip), [beta](https://github.com/ptkdev-boilerplate/node-telegram-bot-boilerplate/archive/beta.zip) or [stable](https://github.com/ptkdev-boilerplate/node-telegram-bot-boilerplate/archive/main.zip).
+1. Clone this repository or download [nightly](https://github.com/ptkdev/rpg-monster-telegram-game-bot/archive/nightly.zip), [beta](https://github.com/ptkdev/rpg-monster-telegram-game-bot/archive/beta.zip) or [stable](https://github.com/ptkdev/rpg-monster-telegram-game-bot/archive/main.zip).
 2. Write to [@botfather](https://t.me/botfather) on telegram and create new bot (save token and set bot username)
-3. Run with correct values: `npm run init:token --username name_bot --token 1234:asdfghjkl`
-4. Run `npm run init`
-5. Run `npm run dev`
-6. Write `/start` on telegram bot.
+3. Set bot token: `export BOT_TOKEN=1234:asdfghjkl`
+4. Set mongodb connection url: `export MONGODB=mongodb://localhost:27017/quizquickanswerdb`
+5. Run `npm install`
+6. Run `npm run dev`
+7. Write `/start` on telegram bot.
 
-### 💾 Setup Project
-
-If you want to replace all strings (example: package name, author, URLs, etc...) in the markdown file, source files and others files of this project you need to edit `setup.json` with correct values and run `npm run setup`.
-
-#### 🪝 Configuring Webhooks
-
-If you want to run the bot using [webhooks](https://core.telegram.org/bots/api#setwebhook) you need to place your SSL certificate and Private key in the `certs` directory and configure the webhook object in the config file like:
-
-```javascript
-webhook: {
- url: "https://my.host.com:8443", // or DNS name
- port: 8443,
- selfSigned: true
-},
-```
-
-If you want to run the bot with your self-signed certificate `selfSigned` flag needs to be set to `true`, this will allow us to communicate to Telegram that our webhook server can be trusted. More information about webhooks with self-signed certificates can be found [here](https://core.telegram.org/bots/self-signed)
-
-you can generate your self-signed certificate using the utility script:
-
-`npm run init:certs [common-name]`
-
-Replace `common-name` with the same host-name or IP address you are using in the `webhook.url` path of the `config.js` file
-
-## 🖥️ Deploy
-
-### 🚀 Native Run
+#### 🚀 Deploy
 
 Deploy bot to your server and:
 
-1. Run with correct values: `npm run init:token --token asdfghjkl`
-2. Run init `npm run init`
-3. Generate release `npm run release`
-4. Start bot `npm run start-pm2`
-
-### 🐳 Docker
-
-You can also release and run your bot as a Docker container.
-
-```sh
-docker run ptkdev/node-telegram-bot-boilerplate:<version>
-```
-
-where `<version>` can be one of the releases (ex. v1.0.0) or `latest`
-
-For your convenience, in case you would like to run the bot in `webhook` mode, we have already exposed `8443` port on our docker files.
-
-To change the configuration to match yours, just change the Dockerfile line with the `EXPOSE` instruction
-
-```docker
-EXPOSE 8443
-```
-
-in the end, you'll be able to expose the docker port using `-p <port>:<host-port>` docker parameter.
-
-The preferred way to provide the configuration file is to mount the final configuration under `/app/dist/configs/config.js`:
-
-```sh
-docker run -v ${PWD}/app/configs/config.js:/app/dist/configs/config.js ptkdev/node-telegram-bot-boilerplate:<version>
-```
-
-> Note: the docker images have been prepared for many architectures but have been tested mainly on amd64 architecture.
+1. Set bot token: `export BOT_TOKEN=1234:asdfghjkl`
+2. Set mongodb connection url: `export MONGODB=mongodb://localhost:27017/quizquickanswerdb`
+3. Run init npm install
+4. Generate release `npm run release`
+5. Start bot `npm run start-pm2`
 
 ## 📚 Documentation
 
@@ -136,7 +97,7 @@ Thanks to all our backers! 🙏 Donate 3$ or more on [paypal](https://www.paypal
 
 ## 👨‍💻 Contributing
 
-I ❤️ contributions! I will happily accept your pull request! Translations, grammatical corrections (GrammarNazi you are welcome! Yes my English is bad, sorry), etc... Do not be afraid, if the code is not perfect we will work together 👯 and remember to insert your name in `.all-contributorsrc` and `package.json` files.
+I ❤️ contributions! I will happily accept your pull request! (**IMPORTANT**: Only to nightly branch!) Translations, grammatical corrections (GrammarNazi you are welcome! Yes my English is bad, sorry), etc... Do not be afraid, if the code is not perfect we will work together 👯 and remember to insert your name in `.all-contributorsrc` and `package.json` file.
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
@@ -144,11 +105,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://ptk.dev"><img src="https://avatars1.githubusercontent.com/u/442844?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Patryk Rzucidło</b></sub></a><br /><a href="https://github.com/ptkdev/ptkdev-boilerplate/node-telegram-bot-boilerplate/commits?author=ptkdev" title="Code">💻</a> <a href="#translation-ptkdev" title="Translation">🌍</a> <a href="https://github.com/ptkdev/ptkdev-boilerplate/node-telegram-bot-boilerplate/commits?author=ptkdev" title="Documentation">📖</a> <a href="https://github.com/ptkdev/ptkdev-boilerplate/node-telegram-bot-boilerplate/issues?q=author%3Aptkdev" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://edge33.github.io"><img src="https://avatars1.githubusercontent.com/u/5662280?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Francesco Maida</b></sub></a><br /><a href="https://github.com/ptkdev/ptkdev-boilerplate/node-telegram-bot-boilerplate/commits?author=edge33" title="Code">💻</a> <a href="https://github.com/ptkdev/ptkdev-boilerplate/node-telegram-bot-boilerplate/commits?author=edge33" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://verhyppo.github.io"><img src="https://avatars.githubusercontent.com/u/3539384?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Veronica Di Giorgio</b></sub></a><br /><a href="#infra-verhyppo" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/ptkdev/ptkdev-boilerplate/node-telegram-bot-boilerplate/commits?author=verhyppo" title="Documentation">📖</a></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="16.66%"><a href="https://ptk.dev"><img src="https://avatars1.githubusercontent.com/u/442844?v=4?s=100" width="100px;" alt="Patryk Rzucidło"/><br /><sub><b>Patryk Rzucidło</b></sub></a><br /><a href="https://github.com/ptkdev/ptkdev/rpg-monster-telegram-game-bot/commits?author=ptkdev" title="Code">💻</a> <a href="#translation-ptkdev" title="Translation">🌍</a> <a href="https://github.com/ptkdev/ptkdev/rpg-monster-telegram-game-bot/commits?author=ptkdev" title="Documentation">📖</a> <a href="https://github.com/ptkdev/ptkdev/rpg-monster-telegram-game-bot/issues?q=author%3Aptkdev" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="16.66%"><img src="https://avatars1.githubusercontent.com/u/50172746?v=4?s=100" width="100px;" alt="Alì Shadman"/><br /><sub><b>Alì Shadman</b></sub><br /><a href="https://github.com/ptkdev/ptkdev/rpg-monster-telegram-game-bot/commits?author=AliShadman95" title="Code">💻</a> <a href="#translation-AliShadman95" title="Translation">🌍</a> <a href="https://github.com/ptkdev/ptkdev/rpg-monster-telegram-game-bot/commits?author=AliShadman95" title="Documentation">📖</a> <a href="https://github.com/ptkdev/ptkdev/rpg-monster-telegram-game-bot/issues?q=author%3AAliShadman95" title="Bug reports">🐛</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->
@@ -156,7 +118,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-> 💰 In the future, if the donations allow it, I would like to share some of the success with those who helped me the most. To me, Open Source means sharing code, development knowledge and also donations!
+> 💰 In the future, if the donations allow it, I would like to share some of the success with those who helped me the most. For me open source is share of code, share development knowledges and share donations!
 
 ## 🦄 Other Projects
 
@@ -180,7 +142,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- all-shields/projects-badges4:START -->
 
-[![](https://img.shields.io/badge/%F0%9F%8E%A8%20Themes-VSCode-f1c40f.svg?style=flat&logo=)](https://github.com/ptkdev/vscode-theme-dark-blood) [![](https://img.shields.io/badge/%F0%9F%93%9A%20Bot-GameBookChat-34495e.svg?style=flat&logo=)](https://t.me/gamebookchatbot) [![](https://img.shields.io/badge/%F0%9F%91%94%20Boilerplate-Svelte-f368e0.svg?style=flat&logo=)](https://github.com/ptkdev-boilerplate?q=svelte) [![](https://img.shields.io/badge/%F0%9F%91%94%20Boilerplate-WebComponents-f368e0.svg?style=flat&logo=)](https://github.com/ptkdev-boilerplate?q=webcomponent) [![](https://img.shields.io/badge/%F0%9F%91%94%20Boilerplate-BOT-f368e0.svg?style=flat&logo=)](https://github.com/ptkdev-boilerplate?q=bot) [![](https://img.shields.io/badge/%F0%9F%91%94%20Boilerplate-Node-f368e0.svg?style=flat&logo=)](https://github.com/ptkdev-boilerplate?q=node) [![](https://img.shields.io/badge/%F0%9F%92%85%20App-Me%20in%20Gifs-2ecc71.svg?style=flat&logo=)](https://meingifs.pics/) [![](https://img.shields.io/badge/%F0%9F%93%B1%20App-Stickers-2ecc71.svg?style=flat&logo=)](https://github.com/ptkdev/ptkdev-stickers#-install-free)
+[![](https://img.shields.io/badge/%F0%9F%8E%A8%20Themes-VSCode-f1c40f.svg?style=flat&logo=)](https://github.com/ptkdev/vscode-theme-dark-blood) [![](https://img.shields.io/badge/%F0%9F%93%9A%20Bot-GameBookChat-34495e.svg?style=flat&logo=)](https://t.me/gamebookchatbot) [![](https://img.shields.io/badge/%F0%9F%91%94%20Boilerplate-Svelte-f368e0.svg?style=flat&logo=)](https://github.com/ptkdev?q=svelte) [![](https://img.shields.io/badge/%F0%9F%91%94%20Boilerplate-WebComponents-f368e0.svg?style=flat&logo=)](https://github.com/ptkdev?q=webcomponent) [![](https://img.shields.io/badge/%F0%9F%91%94%20Boilerplate-BOT-f368e0.svg?style=flat&logo=)](https://github.com/ptkdev?q=bot) [![](https://img.shields.io/badge/%F0%9F%91%94%20Boilerplate-Node-f368e0.svg?style=flat&logo=)](https://github.com/ptkdev?q=node) [![](https://img.shields.io/badge/%F0%9F%92%85%20App-Me%20in%20Gifs-2ecc71.svg?style=flat&logo=)](https://meingifs.pics/) [![](https://img.shields.io/badge/%F0%9F%93%B1%20App-Stickers-2ecc71.svg?style=flat&logo=)](https://github.com/ptkdev/ptkdev-stickers#-install-free)
 
 <!-- all-shields/projects-badges4:END -->
 
@@ -190,4 +152,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 -   Images and logos have **CC BY-NC 4.0 License**
 -   Documentations and Translations have **CC BY 4.0 License**
 
-###### Copyleft (c) 2021 [Patryk Rzucidło](https://ptk.dev) ([@PTKDev](https://twitter.com/ptkdev)) <[support@ptkdev.io](mailto:support@ptkdev.io)>
+###### Copyleft (c) 2022 [Patryk Rzucidło](https://ptk.dev) ([@PTKDev](https://twitter.com/ptkdev)) <[support@ptkdev.io](mailto:support@ptkdev.io)>

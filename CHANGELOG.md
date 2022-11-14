@@ -1,8 +1,6 @@
-# v1.0.20211121 (November 21, 2021)
+# v0.7.3 (November 07, 2022)
 
--   Fix: Docker
--   Available: CI/CD
--   Feature: telegram web hooks
+-   Fix: Telegram Topics
 
 <!-- all-shields/sponsors-badges:START -->
 
@@ -10,19 +8,41 @@
 
 <!-- all-shields/sponsors-badges:END -->
 
-# v1.0.20210412 (April 12, 2021)
+# v0.7.2 (January 10, 2022)
 
--   Fix: minor fix
--   Fix: readme of issues
+-   Fix: now split with two HASHTAGS (##), not with MINUS sign (-)
+-   Feature: TOP10 yearly
 
-# v1.0.20210406 (April 06, 2021)
+# v0.6.0 (November 24, 2021)
 
--   Stable version
+-   Refactor: No Any
+-   Feature: /show - current quiz
+-   Feature: /ping - call to play
+-   Feature: /groups - official groups
+-   Fix: unpin current quiz when the user pick the master role
+-   Fix: remove up/down vote from previously quiz
+-   Fix: default language from telegram api
 
-# v1.0.20210404 (April 04, 2021)
+# v0.5.0 (November 21, 2021)
 
--   Feature: Setup
+-   Porting: from Telegraf to Grammy Framework
 
-# v1.0.20210331 (March 31, 2021)
+# v0.4.0 (November 07, 2021)
+
+-   Fix bug
+-   Vote the questions/quizzes
+
+# v0.3.0 (October 18, 2021)
+
+-   Multilanguage support
+-   Scores board
+-   Porting from lowdb to mongodb
+
+# v0.2.0 (August 23, 2021)
+
+-   Stable version (only italian language)
+-   Work with all groups, play with friends!
+
+# v0.1.0 (August 16, 2021)
 
 -   First release

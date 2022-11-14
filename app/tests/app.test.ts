@@ -3,13 +3,12 @@
  * =====================
  *
  * @contributors: Patryk Rzucidło [@ptkdev] <support@ptkdev.io> (https://ptk.dev)
+ *                Alì Shadman [@AliShadman95] (https://github.com/AliShadman95)
  *
  * @license: MIT License
  *
  */
-import m from "../functions/module";
-
 test("show hello world", async () => {
-	const { app } = await m({ text: "hello-world" });
-	expect(app()).toBe("hello-world");
+	const app = () => "hello-world";
+	await expect(app()).toBe("hello-world");
 });
