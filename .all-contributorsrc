@@ -1,0 +1,47 @@
+{
+	"projectName": "ptkdev-boilerplate/node-telegram-bot-boilerplate",
+	"projectOwner": "ptkdev",
+	"repoType": "github",
+	"repoHost": "https://github.com",
+	"files": [
+		"README.md"
+	],
+	"imageSize": 100,
+	"commit": true,
+	"contributors": [
+		{
+			"login": "ptkdev",
+			"name": "Patryk Rzucidło",
+			"avatar_url": "https://avatars1.githubusercontent.com/u/442844?v=4",
+			"profile": "https://ptk.dev",
+			"contributions": [
+				"code",
+				"translation",
+				"doc",
+				"bug"
+			]
+		},
+		{
+			"login": "edge33",
+			"name": "Francesco Maida",
+			"avatar_url": "https://avatars1.githubusercontent.com/u/5662280?v=4",
+			"profile": "https://edge33.github.io",
+			"contributions": [
+				"code",
+				"doc"
+			]
+		},
+		{
+			"login": "verhyppo",
+			"name": "Veronica Di Giorgio",
+			"avatar_url": "https://avatars.githubusercontent.com/u/3539384?v=4",
+			"profile": "https://verhyppo.github.io",
+			"contributions": [
+				"infra",
+				"doc"
+			]
+		}
+	],
+	"contributorsPerLine": 6,
+	"commitConvention": "none"
+}
