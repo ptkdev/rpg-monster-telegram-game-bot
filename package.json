@@ -2,7 +2,7 @@
 	"name": "@ptkdev/rpg-monster-telegram-game-bot",
 	"displayName": "RPG Monster Game Bot",
 	"description": "RPG Monster Game Bot for Telegram Groups",
-	"version": "0.0.1",
+	"version": "0.0.1-nightly.0",
 	"main": "dist/core/bot.js",
 	"publishConfig": {
 		"access": "public"
