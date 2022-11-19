@@ -12,8 +12,8 @@
 import db from "@routes/api/database";
 import logger from "./logger";
 
-import type { MasterInterface } from "@app/types/master.interfaces";
-
+/* import type { MasterInterface } from "@app/types/character.interfaces";
+ */
 /**
  * Send message to all groups
  * =====================
@@ -23,13 +23,13 @@ import type { MasterInterface } from "@app/types/master.interfaces";
  * @param {any} ctx - Telegram context
  */
 const sendMessageToAllGroups = async (): Promise<void> => {
-	const masters: MasterInterface[] = await db.master.getMultiple({});
+	/* const masters: MasterInterface[] = await db.master.getMultiple({});
 	const groups = masters
 		.map((m) => m.group_id)
 		.filter((elem, index, self) => {
 			return index === self.indexOf(elem);
 		});
-	logger.info(groups.join(" "));
+	logger.info(groups.join(" ")); */
 };
 
 /**

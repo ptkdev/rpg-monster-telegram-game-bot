@@ -8,7 +8,7 @@
  * @license: MIT License
  *
  */
-import type { MasterInterface } from "@app/types/master.interfaces";
+import type { MasterInterface } from "@app/types/character.interfaces";
 
 /**
  * GameInterface

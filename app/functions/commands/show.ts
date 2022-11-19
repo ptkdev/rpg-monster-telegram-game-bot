@@ -15,10 +15,10 @@ import telegram from "@routes/api/telegram";
 import logger from "@app/functions/utils/logger";
 import db from "@routes/api/database";
 
-import type { MasterInterface } from "@app/types/master.interfaces";
-
+/* import type { MasterInterface } from "@app/types/character.interfaces";
+ */
 const show = async (): Promise<void> => {
-	bot.command("show", async (ctx) => {
+	/* bot.command("show", async (ctx) => {
 		logger.info("command: /show", "show.ts:show()");
 		const lang = await telegram.api.message.getLanguage(ctx);
 
@@ -56,7 +56,7 @@ const show = async (): Promise<void> => {
 				translate(lang.language, "command_only_group"),
 			);
 		}
-	});
+	}); */
 };
 
 export { show };

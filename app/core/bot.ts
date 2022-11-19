@@ -19,7 +19,8 @@ import logger from "@app/functions/utils/logger";
 
 	await commands.start();
 	await commands.actions();
-	await commands.master();
+	await commands.new_character();
+	/* await commands.master();
 	await commands.version();
 	await commands.top10();
 	await commands.topYearly();
@@ -29,7 +30,7 @@ import logger from "@app/functions/utils/logger";
 	await commands.show();
 	await commands.settings();
 	await commands.hears();
-	await commands.hearsPhoto();
+	await commands.hearsPhoto(); */
 
 	await commands.launch();
 })();

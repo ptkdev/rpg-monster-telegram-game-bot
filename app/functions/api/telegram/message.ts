@@ -12,8 +12,8 @@ import logger from "@app/functions/utils/logger";
 import bot from "@app/core/token";
 import db from "@routes/api/database";
 import type { Context, RawApi } from "grammy";
-import type { MasterInterface } from "@app/types/master.interfaces";
-import type { SettingsInterface } from "@app/types/settings.interfaces";
+/* import type { MasterInterface } from "@app/types/character.interfaces";
+ */ import type { SettingsInterface } from "@app/types/settings.interfaces";
 import { Other } from "grammy/out/core/api";
 
 const getUsername = (ctx: Context): string => {
@@ -45,7 +45,7 @@ const getUserFirstName = (ctx: Context): string => {
 	return first_name?.trim() || "";
 };
 
-const getFullUser = (ctx: Context): MasterInterface => {
+/* const getFullUser = (ctx: Context): MasterInterface => {
 	const from = (ctx?.update?.message?.from as MasterInterface) || {};
 
 	from.username = getUsername(ctx);
@@ -56,7 +56,7 @@ const getFullUser = (ctx: Context): MasterInterface => {
 
 	return from;
 };
-
+ */
 const getChatID = (ctx: Context): number => {
 	return (
 		ctx?.update?.message?.chat?.id || ctx?.message?.chat?.id || ctx?.update?.callback_query?.message?.chat?.id || 0
@@ -215,7 +215,7 @@ const unpin = async (ctx: Context, group_id: number, message_id: number, options
 };
 
 export {
-	getFullUser,
+	/* getFullUser, */
 	getUsername,
 	getChatID,
 	getThreadID,
@@ -238,7 +238,7 @@ export {
 	editMessageReplyMarkup,
 };
 export default {
-	getFullUser,
+	/* getFullUser, */
 	getUsername,
 	getChatID,
 	getThreadID,

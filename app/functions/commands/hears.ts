@@ -17,8 +17,8 @@ import logger from "@app/functions/utils/logger";
 import { similarity } from "@app/functions/utils/utils";
 import { vote } from "@app/functions/utils/vote";
 
-import type { MasterInterface } from "@app/types/master.interfaces";
-import type { QuestionsInterface } from "@app/types/question.interfaces";
+/* import type { MasterInterface } from "@app/types/character.interfaces";
+ */ import type { QuestionsInterface } from "@app/types/question.interfaces";
 
 /**
  * hears: any taxt from bot chat
@@ -27,7 +27,7 @@ import type { QuestionsInterface } from "@app/types/question.interfaces";
  *
  */
 const hears = async (): Promise<void> => {
-	bot.on("message:text", async (ctx) => {
+	/* bot.on("message:text", async (ctx) => {
 		logger.info("hears: text", "hears.ts:on(text)");
 		const lang = await telegram.api.message.getLanguage(ctx);
 
@@ -211,7 +211,7 @@ const hears = async (): Promise<void> => {
 	});
 	bot.callbackQuery("downvote", async (ctx) => {
 		await vote(ctx, "downvote");
-	});
+	}); */
 };
 
 export { hears };

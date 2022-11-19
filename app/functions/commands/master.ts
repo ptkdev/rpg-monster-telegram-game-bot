@@ -14,8 +14,8 @@ import db from "@routes/api/database";
 import telegram from "@routes/api/telegram";
 import logger from "@app/functions/utils/logger";
 
-import type { MasterInterface } from "@app/types/master.interfaces";
-
+/* import type { MasterInterface } from "@app/types/character.interfaces";
+ */
 /**
  * command: /master
  * =====================
@@ -23,7 +23,7 @@ import type { MasterInterface } from "@app/types/master.interfaces";
  *
  */
 const master = async (): Promise<void> => {
-	bot.command("master", async (ctx) => {
+	/* bot.command("master", async (ctx) => {
 		logger.info("command: /master", "master.ts:master()");
 		const lang = await telegram.api.message.getLanguage(ctx);
 
@@ -81,7 +81,7 @@ const master = async (): Promise<void> => {
 				translate(lang.language, "command_only_group"),
 			);
 		}
-	});
+	}); */
 };
 
 export { master };

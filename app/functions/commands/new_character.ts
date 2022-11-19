@@ -1,5 +1,5 @@
 /**
- * Start
+ * New character
  * =====================
  *
  * @contributors: Patryk Rzucidło [@ptkdev] <support@ptkdev.io> (https://ptk.dev)
@@ -14,19 +14,19 @@ import db from "@routes/api/database";
 import telegram from "@routes/api/telegram";
 import logger from "@app/functions/utils/logger";
 
-/* import type { MasterInterface } from "@app/types/character.interfaces";
- */
+import type { CharacterInterface } from "@app/types/character.interfaces";
+
 /**
- * command: /start
+ * command: /new
  * =====================
- * Send welcome message
+ * Create new character
  *
  */
-const start = async (): Promise<void> => {
-	/* bot.command("start", async (ctx) => {
+const new_character = async (): Promise<void> => {
+	bot.command("new", async (ctx) => {
 		logger.info("command: /start", "start.ts:start()");
 		const lang = await telegram.api.message.getLanguage(ctx);
-		const users: MasterInterface = await db.users.get({
+		/* 	const users: MasterInterface = await db.users.get({
 			id: telegram.api.message.getUserID(ctx),
 		});
 
@@ -34,26 +34,28 @@ const start = async (): Promise<void> => {
 			await db.users.update({ id: users.id }, telegram.api.message.getFullUser(ctx));
 		} else {
 			await db.users.add(telegram.api.message.getFullUser(ctx));
-		}
+		} */
 
 		if (telegram.api.message.getChatID(ctx) < 0) {
 			// is group chat
 			await telegram.api.message.send(
 				ctx,
 				telegram.api.message.getChatID(ctx),
-				translate(lang.language, "start_command_group", {
-					username: telegram.api.message.getUsername(ctx),
+				translate(lang.language, "new_character_group", {
+					bot_username: telegram.api.bot.getUsername(ctx),
 				}),
 			);
 		} else {
 			await telegram.api.message.send(
 				ctx,
 				telegram.api.message.getChatID(ctx),
-				translate(lang.language, "start_command_private"),
+				translate(lang.language, "new_character_private", {
+					bot_username: telegram.api.bot.getUsername(ctx),
+				}),
 			);
 		}
-	}); */
+	});
 };
 
-export { start };
-export default start;
+export { new_character };
+export default new_character;

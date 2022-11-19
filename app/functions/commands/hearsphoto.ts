@@ -15,8 +15,8 @@ import telegram from "@routes/api/telegram";
 import logger from "@app/functions/utils/logger";
 import { vote } from "@app/functions/utils/vote";
 
-import type { MasterInterface } from "@app/types/master.interfaces";
-
+/* import type { MasterInterface } from "@app/types/character.interfaces";
+ */
 /**
  * hearsPhoto: any photo from bot chat
  * =====================
@@ -24,7 +24,7 @@ import type { MasterInterface } from "@app/types/master.interfaces";
  *
  */
 const hearsPhoto = async (): Promise<void> => {
-	bot.on("message:photo", async (ctx) => {
+	/* bot.on("message:photo", async (ctx) => {
 		logger.info("hears: photo", "hears.ts:on(photo)");
 		const lang = await telegram.api.message.getLanguage(ctx);
 
@@ -134,7 +134,7 @@ const hearsPhoto = async (): Promise<void> => {
 	});
 	bot.callbackQuery("downvote", async (ctx) => {
 		await vote(ctx, "downvote");
-	});
+	}); */
 };
 
 export { hearsPhoto };

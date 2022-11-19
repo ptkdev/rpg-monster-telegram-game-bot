@@ -13,11 +13,11 @@ import telegram from "@routes/api/telegram";
 import db from "@routes/api/database";
 import translate from "@translations/translate";
 
-import type { MasterInterface } from "@app/types/master.interfaces";
-import type { QuestionsInterface } from "@app/types/question.interfaces";
+/* import type { MasterInterface } from "@app/types/character.interfaces";
+ */ import type { QuestionsInterface } from "@app/types/question.interfaces";
 
 const vote = async (ctx, type): Promise<void> => {
-	const lang = await telegram.api.message.getLanguage(ctx);
+	/* const lang = await telegram.api.message.getLanguage(ctx);
 
 	if (telegram.api.message.getChatID(ctx) < 0) {
 		// is group chat
@@ -127,7 +127,7 @@ const vote = async (ctx, type): Promise<void> => {
 			telegram.api.message.getChatID(ctx),
 			translate(lang.language, "command_only_group"),
 		);
-	}
+	} */
 };
 
 export { vote };

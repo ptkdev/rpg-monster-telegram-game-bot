@@ -13,8 +13,8 @@ import translate from "@translations/translate";
 import db from "@routes/api/database";
 import telegram from "@routes/api/telegram";
 
-import { MasterInterface } from "@app/types/master.interfaces";
-import { QuestionsInterface } from "@app/types/question.interfaces";
+/* import { MasterInterface } from "@app/types/character.interfaces";
+ */ import { QuestionsInterface } from "@app/types/question.interfaces";
 
 import logger from "@app/functions/utils/logger";
 
@@ -25,7 +25,7 @@ import logger from "@app/functions/utils/logger";
  *
  */
 const score = async (): Promise<void> => {
-	bot.command("score", async (ctx) => {
+	/* bot.command("score", async (ctx) => {
 		logger.info("command: /score", "score.ts:score()");
 		const lang = await telegram.api.message.getLanguage(ctx);
 
@@ -98,7 +98,7 @@ const score = async (): Promise<void> => {
 				translate(lang.language, "command_only_group"),
 			);
 		}
-	});
+	}); */
 };
 
 export { score };

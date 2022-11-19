@@ -49,5 +49,7 @@
 	"ping_command": "🎮 Come and play! ⏱ The game is about to start!",
 	"show_command": "👨‍💻 The master is: {{first_name}} (@{{username}})\n\n⏱ The quiz is: <b>{{answer}}</b>",
 	"show_command_noquiz": "👨‍💻 The master is: {{first_name}} (@{{username}})\n\n⏱ The quiz is not avaiable! Hurry up to write it!",
-	"top10_commands": "The top10 available are: \n\n/top2021\n\n/top2022"
+	"top10_commands": "The top10 available are: \n\n/top2021\n\n/top2022",
+	"new_character_group": "To create a new character, write a private message to @{{bot_username}} (click on the nickname) and follow the instruction.",
+	"new_character_private": "Welcome to the creation of your new character. Write down the name of your character, for exemple:\n\n<code>Patryk</code>\n\n"
 }

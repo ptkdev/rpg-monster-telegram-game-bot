@@ -14,13 +14,13 @@ import telegram from "@routes/api/telegram";
 import db from "@routes/api/database";
 import { getTopScoreEmoji } from "@app/functions/utils/utils";
 
-import type { MasterInterface } from "@app/types/master.interfaces";
-import type { QuestionsInterface } from "@app/types/question.interfaces";
+/* import type { MasterInterface } from "@app/types/character.interfaces";
+ */ import type { QuestionsInterface } from "@app/types/question.interfaces";
 
 import logger from "@app/functions/utils/logger";
 
 const topYearly = async (): Promise<void> => {
-	bot.command(["top2021", "top2022"], async (ctx) => {
+	/* bot.command(["top2021", "top2022"], async (ctx) => {
 		logger.info("command: /topyearly", "topYearly.ts:topyearly()");
 		const lang = await telegram.api.message.getLanguage(ctx);
 
@@ -75,7 +75,7 @@ const topYearly = async (): Promise<void> => {
 				translate(lang.language, "command_only_group"),
 			);
 		}
-	});
+	}); */
 };
 
 export { topYearly };

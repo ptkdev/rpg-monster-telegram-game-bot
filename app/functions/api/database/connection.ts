@@ -50,7 +50,7 @@ const connectDB = async (): Promise<void> => {
  */
 const disconnectDB = async (): Promise<void> => {
 	if (!database) {
-		logger.info("tried to disconnect but dont have connections");
+		logger.info("Tried to disconnect but there are no connections", "connections.ts:disconnectDB()");
 		return;
 	}
 	try {

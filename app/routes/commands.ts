@@ -12,6 +12,7 @@ import hearsPhoto from "@app/functions/commands/hearsphoto";
 import settings from "@app/functions/commands/settings";
 import actions from "@app/functions/commands/actions";
 import version from "@app/functions/commands/version";
+import new_character from "@app/functions/commands/new_character";
 
 const commands = {
 	start,
@@ -28,6 +29,7 @@ const commands = {
 	hearsPhoto,
 	actions,
 	version,
+	new_character,
 };
 
 export {
@@ -45,5 +47,6 @@ export {
 	hearsPhoto,
 	actions,
 	version,
+	new_character,
 };
 export default commands;
