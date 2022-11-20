@@ -20,6 +20,8 @@ import logger from "@app/functions/utils/logger";
 	await commands.start();
 	await commands.actions();
 	await commands.new_character();
+	await commands.hears();
+	await commands.hearsPhoto();
 	/* await commands.master();
 	await commands.version();
 	await commands.top10();

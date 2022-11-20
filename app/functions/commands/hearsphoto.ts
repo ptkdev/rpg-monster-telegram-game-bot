@@ -1,5 +1,5 @@
 /**
- * Telegraf Hears
+ * Grammy Hears
  * =====================
  *
  * @contributors: Patryk Rzucidło [@ptkdev] <support@ptkdev.io> (https://ptk.dev)
@@ -9,14 +9,15 @@
  *
  */
 import bot from "@app/core/token";
+import { InlineKeyboard } from "grammy";
 import translate from "@translations/translate";
 import db from "@routes/api/database";
 import telegram from "@routes/api/telegram";
 import logger from "@app/functions/utils/logger";
-import { vote } from "@app/functions/utils/vote";
+import { getAndSaveImage } from "@app/functions/utils/get_and_save_image";
 
-/* import type { MasterInterface } from "@app/types/character.interfaces";
- */
+import type { CharacterInterface } from "@app/types/character.interfaces";
+
 /**
  * hearsPhoto: any photo from bot chat
  * =====================
@@ -24,117 +25,115 @@ import { vote } from "@app/functions/utils/vote";
  *
  */
 const hearsPhoto = async (): Promise<void> => {
-	/* bot.on("message:photo", async (ctx) => {
-		logger.info("hears: photo", "hears.ts:on(photo)");
+	bot.on("message:photo", async (ctx) => {
+		logger.info("hears: photo", "hearsphoto.ts:on(photo)");
 		const lang = await telegram.api.message.getLanguage(ctx);
 
 		if (telegram.api.message.getChatID(ctx) > 0) {
 			// is chat with bot
-			const master: MasterInterface = await db.master.get({
+			const character: CharacterInterface = await db.character.get({
 				username: telegram.api.message.getUsername(ctx),
 			});
 
-			const photo_id = telegram.api.message.getPhotoFileID(ctx);
+			if (character.id.toString() !== "0" && character.step !== "done") {
+				const photoInfo: any = await telegram.api.message.getPhotoInfo(ctx);
 
-			if (master?.username === telegram.api.message.getUsername(ctx)) {
-				const text = telegram.api.message.getPhotoCaption(ctx).split("##");
-				if (text !== undefined) {
-					const json = telegram.api.message.getFullUser(ctx);
-					json.question = text[0]?.trim()?.toLowerCase() || "";
-					json.description = text[1]?.trim() || "";
-					json.group_id = master?.group_id || 0;
-					json.message_thread_id = master?.message_thread_id;
-
-					if (json.question === undefined || json.question === "") {
-						await telegram.api.message.send(
-							ctx,
-							telegram.api.message.getChatID(ctx),
-							translate(lang.language, "hears_missing_question"),
-						);
-					} else if (json.description === undefined || json.description === "") {
-						await telegram.api.message.send(
-							ctx,
-							telegram.api.message.getChatID(ctx),
-							translate(lang.language, "hears_missing_tip"),
-						);
-					} else {
-						await db.master.update({ username: telegram.api.message.getUsername(ctx) }, json);
-
-						const master_in_multi_groups = await db.master.getMultiple({
-							username: telegram.api.message.getUsername(ctx),
-						});
-
-						master_in_multi_groups.forEach(async (master_in_group) => {
-							const quiz = await telegram.api.message.sendPhoto(
+				switch (character.step) {
+					case "picture":
+					case "set_picture":
+						if (photoInfo?.file_size > 20971520) {
+							await telegram.api.message.send(
 								ctx,
-								master_in_group?.group_id,
-								photo_id,
+								telegram.api.message.getChatID(ctx),
+								translate(lang.language, "set_command_photo_size", {
+									username: telegram.api.message.getUsername(ctx),
+								}),
+							);
+							return;
+						}
+
+						await getAndSaveImage(photoInfo?.file_path, character.id.toString());
+
+						if (character.step.toString() === "set_picture") {
+							character.step = "done";
+
+							await db.character.update({ id: character.id }, character);
+							await telegram.api.message.send(
+								ctx,
+								telegram.api.message.getChatID(ctx),
+								translate(lang.language, "set_command_done", {
+									username: telegram.api.message.getUsername(ctx),
+								}),
+							);
+						} else {
+							character.step = "role";
+
+							await db.character.update({ id: character.id }, character);
+
+							const buttons = new InlineKeyboard();
+							buttons.text(`🔥 DPS`, "dps").row();
+							buttons.text(`🧽 TANK`, "tank").row();
+							buttons.text(`💉 HEALER`, "healer").row();
+
+							await telegram.api.message.send(
+								ctx,
+								telegram.api.message.getChatID(ctx),
+								translate(lang.language, "set_command_role"),
 								{
-									caption: `⏱ ${json.description || ""}`,
-									reply_markup: {
-										inline_keyboard: [
-											[
-												{ text: `👍 0`, callback_data: "upvote" },
-												{ text: `👎 0`, callback_data: "downvote" },
-											],
-										],
-									},
-									message_thread_id: master_in_group.message_thread_id,
+									reply_markup: buttons,
+									message_thread_id: character.message_thread_id,
 								},
 							);
+						}
 
-							if (quiz) {
-								await telegram.api.message.pin(ctx, master_in_group?.group_id, quiz?.message_id, {
-									disable_notification: true,
-									message_thread_id: master_in_group.message_thread_id,
-								});
-
-								master_in_group.pin_id = quiz?.message_id || 0;
-								await db.master.update(
-									{ username: telegram.api.message.getUsername(ctx) },
-									master_in_group,
-								);
-							} else {
-								await db.master.remove({
-									group_id: master_in_group?.group_id,
-								});
-
-								await telegram.api.message.unpin(
-									ctx,
-									master_in_group?.group_id,
-									master_in_group?.pin_id,
-								);
-
-								await telegram.api.message.removeMessageMarkup(
-									master_in_group?.group_id,
-									master_in_group?.pin_id,
-								);
-							}
-						});
-					}
-				} else {
-					await telegram.api.message.send(
-						ctx,
-						telegram.api.message.getChatID(ctx),
-						translate(lang.language, "hears_missing_photo_caption"),
-					);
+						break;
 				}
-			} else {
-				await telegram.api.message.send(
-					ctx,
-					telegram.api.message.getChatID(ctx),
-					translate(lang.language, "hears_not_you_master"),
-				);
 			}
 		}
-	});
 
-	bot.callbackQuery("upvote", async (ctx) => {
-		await vote(ctx, "upvote");
+		if (telegram.api.message.getChatID(ctx) < 0) {
+			// is group
+		}
 	});
-	bot.callbackQuery("downvote", async (ctx) => {
-		await vote(ctx, "downvote");
-	}); */
+};
+
+bot.callbackQuery("dps", async (ctx) => {
+	logger.info("callbackQuery: dps", "hearsphoto.ts:on(dps)");
+	await setRole(ctx, "dps");
+});
+bot.callbackQuery("tank", async (ctx) => {
+	logger.info("callbackQuery: tank", "hearsphoto.ts:on(tank)");
+	await setRole(ctx, "tank");
+});
+bot.callbackQuery("healer", async (ctx) => {
+	logger.info("callbackQuery: healer", "hearsphoto.ts:on(healer)");
+	await setRole(ctx, "healer");
+});
+
+const setRole = async (ctx: any, role: string): Promise<void> => {
+	logger.info("setRole", "hearsphoto.ts:on(setRole)");
+
+	const character: CharacterInterface = await db.character.get({
+		username: telegram.api.message.getUsernameFromAction(ctx),
+	});
+	const lang = character.language_code;
+
+	character.role = role;
+	character.step = "done";
+
+	await db.character.update({ id: character.id }, character);
+	await telegram.api.message.send(
+		ctx,
+		telegram.api.message.getChatID(ctx),
+		translate(lang || "it", "set_command_done", {
+			username: telegram.api.message.getUsernameFromAction(ctx),
+		}),
+	);
+
+	// Rimuove i bottoni
+	await telegram.api.message.editMessageReplyMarkup(ctx, {
+		reply_markup: new InlineKeyboard(),
+	});
 };
 
 export { hearsPhoto };

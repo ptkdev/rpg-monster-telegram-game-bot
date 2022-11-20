@@ -26,15 +26,6 @@ const new_character = async (): Promise<void> => {
 	bot.command("new", async (ctx) => {
 		logger.info("command: /start", "start.ts:start()");
 		const lang = await telegram.api.message.getLanguage(ctx);
-		/* 	const users: MasterInterface = await db.users.get({
-			id: telegram.api.message.getUserID(ctx),
-		});
-
-		if (users.id.toString() !== "0") {
-			await db.users.update({ id: users.id }, telegram.api.message.getFullUser(ctx));
-		} else {
-			await db.users.add(telegram.api.message.getFullUser(ctx));
-		} */
 
 		if (telegram.api.message.getChatID(ctx) < 0) {
 			// is group chat
@@ -46,13 +37,37 @@ const new_character = async (): Promise<void> => {
 				}),
 			);
 		} else {
-			await telegram.api.message.send(
-				ctx,
-				telegram.api.message.getChatID(ctx),
-				translate(lang.language, "new_character_private", {
-					bot_username: telegram.api.bot.getUsername(ctx),
-				}),
-			);
+			if (telegram.api.message.getUsername(ctx) !== "") {
+				const character: CharacterInterface = await db.character.get({
+					id: telegram.api.message.getUserID(ctx),
+				});
+
+				if (character.id.toString() !== "0") {
+					await telegram.api.message.send(
+						ctx,
+						telegram.api.message.getChatID(ctx),
+						translate(lang.language, "new_character_already_exist"),
+					);
+				} else {
+					const pg = {
+						...telegram.api.message.getFullUser(ctx),
+						step: "name",
+					};
+					await db.character.add(pg);
+
+					await telegram.api.message.send(
+						ctx,
+						telegram.api.message.getChatID(ctx),
+						translate(lang.language, "new_character_private"),
+					);
+				}
+			} else {
+				await telegram.api.message.send(
+					ctx,
+					telegram.api.message.getChatID(ctx),
+					translate(lang.language, "new_character_no_username"),
+				);
+			}
 		}
 	});
 };

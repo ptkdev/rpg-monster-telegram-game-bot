@@ -128,3 +128,4 @@ npm-debug.log
 /app/configs/version.json
 /dist
 /build
+/app/images/*/*.jpg

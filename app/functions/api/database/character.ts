@@ -20,16 +20,16 @@ const schema = new Schema<CharacterInterface>({
 	username: { type: String, default: "" },
 	character_name: { type: String, default: "" },
 	language_code: { type: String, default: "en" },
-	picture: { type: String, default: "en" },
 	role: { type: String, default: "en" },
 	attack: { type: Number, default: 0 },
 	defence: { type: Number, default: 0 },
 	health: { type: Number, default: 0 },
 	mana: { type: Number, default: 0 },
-	level: { type: Number, default: 0 },
+	level: { type: Number, default: 1 },
 	experience: { type: Number, default: 0 },
 	group_id: { type: String, default: "0" },
 	message_thread_id: { type: Number, default: 0 },
+	step: { type: String, default: "done" },
 });
 
 const query = model<CharacterInterface>("Character", schema, "character");

@@ -12,8 +12,8 @@ import logger from "@app/functions/utils/logger";
 import bot from "@app/core/token";
 import db from "@routes/api/database";
 import type { Context, RawApi } from "grammy";
-/* import type { MasterInterface } from "@app/types/character.interfaces";
- */ import type { SettingsInterface } from "@app/types/settings.interfaces";
+import type { CharacterInterface } from "@app/types/character.interfaces";
+import type { SettingsInterface } from "@app/types/settings.interfaces";
 import { Other } from "grammy/out/core/api";
 
 const getUsername = (ctx: Context): string => {
@@ -45,18 +45,26 @@ const getUserFirstName = (ctx: Context): string => {
 	return first_name?.trim() || "";
 };
 
-/* const getFullUser = (ctx: Context): MasterInterface => {
-	const from = (ctx?.update?.message?.from as MasterInterface) || {};
+const getFullUser = (ctx: Context): CharacterInterface => {
+	const from = (ctx?.update?.message?.from as CharacterInterface) || {};
 
+	from.id = getUserID(ctx);
 	from.username = getUsername(ctx);
-	from.question = "";
-	from.description = "";
-	from[`score_${new Date().getFullYear()}`] = 0;
-	from.pin_id = 0;
+	from.character_name = "";
+	from.role = "";
+	from.attack = 0;
+	from.defence = 0;
+	from.health = 0;
+	from.mana = 0;
+	from.level = 0;
+	from.experience = 0;
+	from.group_id = getChatID(ctx);
+	from.message_thread_id = getThreadID(ctx);
+	from.step = "done";
 
 	return from;
 };
- */
+
 const getChatID = (ctx: Context): number => {
 	return (
 		ctx?.update?.message?.chat?.id || ctx?.message?.chat?.id || ctx?.update?.callback_query?.message?.chat?.id || 0
@@ -82,6 +90,10 @@ const getPhotoFileID = (ctx: Context, position = 0): string => {
 
 const getPhotoCaption = (ctx: Context): string => {
 	return ctx?.update?.message?.caption || "";
+};
+
+const getPhotoInfo = (ctx: Context) => {
+	return bot.api.getFile(ctx?.update?.message?.photo?.[ctx?.update?.message?.photo?.length - 1 || 0]?.file_id || "");
 };
 
 const getText = (ctx: Context): string => {
@@ -215,7 +227,7 @@ const unpin = async (ctx: Context, group_id: number, message_id: number, options
 };
 
 export {
-	/* getFullUser, */
+	getFullUser,
 	getUsername,
 	getChatID,
 	getThreadID,
@@ -236,9 +248,10 @@ export {
 	getMessageIDFromAction,
 	removeMessageMarkup,
 	editMessageReplyMarkup,
+	getPhotoInfo,
 };
 export default {
-	/* getFullUser, */
+	getFullUser,
 	getUsername,
 	getChatID,
 	getThreadID,
@@ -259,4 +272,5 @@ export default {
 	getMessageIDFromAction,
 	removeMessageMarkup,
 	editMessageReplyMarkup,
+	getPhotoInfo,
 };

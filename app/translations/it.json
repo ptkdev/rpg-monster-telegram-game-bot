@@ -48,5 +48,11 @@
 	"show_command_noquiz": "👨‍💻 Il master è: {{first_name}} (@{{username}})\n\n⏱ Il quiz non c'è! Daje un po'! Sbrigati a scriverlo!",
 	"top10_commands": "I top10 disponibili sono: \n\n/top2021\n\n/top2022",
 	"new_character_group": "Per creare un nuovo personaggio, scrivi in privato a @{{bot_username}} (clicca sul nickname) e segui le istruzioni.",
-	"new_character_private": "Benvenuto nella creazione del tuo nuovo personaggio. Scrivi il nome del tuo personaggio, per esempio:\n\n<code>Patryk</code>\n\n"
+	"new_character_private": "Benvenuto nella creazione del tuo nuovo personaggio. Scrivi il nome del tuo personaggio, per esempio:\n\n<code>Patryk</code>\n\n",
+	"new_character_already_exist": "Hai già un personaggio! Per vederlo, scrivi /pg",
+	"new_character_no_username": "Non hai un username! Devi impostare un username per creare un personaggio. Per farlo, vai su impostazioni e poi su account. Dopo, clicca su username e imposta un username.",
+	"set_command_done": "🚀 Hai finito! Prova ad usare il comando <code>/pg @{{username}}</code> per vedere il tuo personaggio!",
+	"set_command_picture": "Manda un immagine da usare come avatar del tuo personaggio. (Dimensione massima 20MB)",
+	"set_command_photo_size": "L'immagine è troppo grande! Devi mandare un immagine con dimensioni inferiori a 20MB.",
+	"set_command_role": "Scegli il ruolo del tuo personaggio:"
 }

@@ -14,11 +14,9 @@ import translate from "@translations/translate";
 import db from "@routes/api/database";
 import telegram from "@routes/api/telegram";
 import logger from "@app/functions/utils/logger";
-import { similarity } from "@app/functions/utils/utils";
 import { vote } from "@app/functions/utils/vote";
 
-/* import type { MasterInterface } from "@app/types/character.interfaces";
- */ import type { QuestionsInterface } from "@app/types/question.interfaces";
+import type { CharacterInterface } from "@app/types/character.interfaces";
 
 /**
  * hears: any taxt from bot chat
@@ -27,7 +25,71 @@ import { vote } from "@app/functions/utils/vote";
  *
  */
 const hears = async (): Promise<void> => {
-	/* bot.on("message:text", async (ctx) => {
+	bot.on("message:text", async (ctx) => {
+		logger.info("hears: text", "hears.ts:on(text)");
+		const lang = await telegram.api.message.getLanguage(ctx);
+
+		if (telegram.api.message.getChatID(ctx) > 0) {
+			// is chat with bot
+			const character: CharacterInterface = await db.character.get({
+				username: telegram.api.message.getUsername(ctx),
+			});
+
+			if (character.id.toString() !== "0" && character.step !== "done") {
+				const text = telegram.api.message.getText(ctx);
+
+				// SET NAME
+				switch (character.step) {
+					case "name":
+					case "set_name":
+						// TODO  Validare il nome del personaggio con qualche regex
+						character.character_name = text;
+
+						if (character.step.toString() === "set_name") {
+							character.step = "done";
+
+							await db.character.update({ id: character.id }, character);
+							await telegram.api.message.send(
+								ctx,
+								telegram.api.message.getChatID(ctx),
+								translate(lang.language, "set_command_done", {
+									username: telegram.api.message.getUsername(ctx),
+								}),
+							);
+						} else {
+							character.step = "picture";
+
+							await db.character.update({ id: character.id }, character);
+
+							await telegram.api.message.send(
+								ctx,
+								telegram.api.message.getChatID(ctx),
+								translate(lang.language, "set_command_picture"),
+							);
+						}
+
+						break;
+				}
+			}
+		}
+
+		if (telegram.api.message.getChatID(ctx) < 0) {
+			// is group
+		}
+	});
+
+	/* bot.callbackQuery("upvote", async (ctx) => {
+		await vote(ctx, "upvote");
+	});
+	bot.callbackQuery("downvote", async (ctx) => {
+		await vote(ctx, "downvote");
+	}); */
+};
+
+export { hears };
+export default hears;
+
+/* bot.on("message:text", async (ctx) => {
 		logger.info("hears: text", "hears.ts:on(text)");
 		const lang = await telegram.api.message.getLanguage(ctx);
 
@@ -212,7 +274,3 @@ const hears = async (): Promise<void> => {
 	bot.callbackQuery("downvote", async (ctx) => {
 		await vote(ctx, "downvote");
 	}); */
-};
-
-export { hears };
-export default hears;
