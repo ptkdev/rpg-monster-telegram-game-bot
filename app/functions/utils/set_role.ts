@@ -13,26 +13,27 @@ const getUpdatedCharacterByStats = (role: string, character: CharacterInterface)
 		default:
 			return {
 				...character,
+				role,
 				attack: 10,
 				defence: 5,
 				health: 100,
 				mana: 50,
-				step: "done",
 			};
 
 		case "tank":
 			return {
 				...character,
+				role,
 				attack: 5,
 				defence: 10,
 				health: 150,
 				mana: 10,
-				step: "done",
 			};
 
 		case "healer":
 			return {
 				...character,
+				role,
 				attack: 4,
 				defence: 8,
 				health: 120,
@@ -59,7 +60,6 @@ const setRole = async (ctx: any, role: string): Promise<void> => {
 	const lang = character.language_code;
 
 	character = getUpdatedCharacterByStats(role, character);
-	character.role = role;
 	character.step = "done";
 
 	await db.character.update({ id: character.id }, character);
