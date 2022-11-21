@@ -32,7 +32,7 @@ const settings = async (): Promise<void> => {
 		buttons.row();
 		buttons.url(
 			translate(lang.language, "settings_command_opensource"),
-			"https://github.com/ptkdev/rpg-monster-telegram-game-bot",
+			"https://github.com/ptkdev/rpg-dndev-telegram-game-bot",
 		);
 		buttons.row();
 		buttons.text(translate(lang.language, "settings_command_credits"), "settings_credits");
@@ -60,7 +60,7 @@ const settings = async (): Promise<void> => {
 		buttons.row();
 		buttons.url(
 			translate(lang.language, "settings_command_language_new"),
-			"https://github.com/ptkdev/rpg-monster-telegram-game-bot/tree/main/app/translations",
+			"https://github.com/ptkdev/rpg-dndev-telegram-game-bot/tree/main/app/translations",
 		);
 
 		await telegram.api.message.send(

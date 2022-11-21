@@ -13,7 +13,7 @@ module.exports = {
 	},
 
 	// mongodb
-	database: { URL: process.env.MONGODB || "mongodb://localhost:27017/quizquickanswerdb" },
+	database: { URL: process.env.MONGODB || "mongodb://localhost:27017/rpgdb" },
 
 	// Debug
 	debug: process.env.DEBUG || "disabled",

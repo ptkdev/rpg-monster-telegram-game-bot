@@ -14,7 +14,7 @@ import type { MasterInterface } from "@app/types/character.interfaces";
  * GameInterface
  * =====================
  *
- * @interface [GameInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/types/game.interfaces.ts)
+ * @interface [GameInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/types/game.interfaces.ts)
  *
  * @param { string } question - game question
  * @param { string } description - game tip

@@ -1,5 +1,5 @@
 {
-	"name": "rpg-monster-telegram-game-bot",
+	"name": "rpg-dndev-telegram-game-bot",
 	"script": "dist/core/bot.js",
 	"watch": true,
 	"max_restarts": 9999,

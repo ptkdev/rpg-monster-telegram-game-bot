@@ -13,7 +13,7 @@
  * SettingsInterface
  * =====================
  *
- * @interface [SettingsInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/types/game.interfaces.ts)
+ * @interface [SettingsInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/types/game.interfaces.ts)
  *
  * @param { string } language - language
  * @param { boolean } pin_message - pin message to the chat

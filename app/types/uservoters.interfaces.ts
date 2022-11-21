@@ -13,7 +13,7 @@
  * UserVoters Interface
  * =====================
  *
- * @interface [UserVotersInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/types/game.interfaces.ts)
+ * @interface [UserVotersInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/types/game.interfaces.ts)
  *
  * @param { string[]  } upvotes - user id of the voters that had upvoted
  * @param {  string[]  } downvotes - user id of the voters that had downvoted

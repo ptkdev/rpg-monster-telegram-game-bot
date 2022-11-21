@@ -18,23 +18,9 @@ import logger from "@app/functions/utils/logger";
 	await db.connection.connectDB();
 
 	await commands.start();
-	await commands.actions();
 	await commands.new_character();
 	await commands.set();
 	await commands.pg();
-	await commands.hears();
-	await commands.hearsPhoto();
-	/* await commands.master();
-	await commands.version();
-	await commands.top10();
-	await commands.topYearly();
-	await commands.score();
-	await commands.groups();
-	await commands.ping();
-	await commands.show();
-	await commands.settings();
-	await commands.hears();
-	await commands.hearsPhoto(); */
 
 	await commands.launch();
 })();

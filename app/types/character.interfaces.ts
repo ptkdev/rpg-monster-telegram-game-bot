@@ -14,7 +14,7 @@
  * =====================
  *
  *
- * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+ * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
  *
  * @param { number } id - telegram id
  * @param { boolean } is_bot - is user a bot
@@ -38,7 +38,7 @@ export interface CharacterInterface {
 	 * Character Interface
 	 * =====================
 	 *
-	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
 	 *
 	 * @param { string } id - telegram id
 	 *
@@ -48,7 +48,7 @@ export interface CharacterInterface {
 	 * Character Interface
 	 * =====================
 	 *
-	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
 	 *
 	 * @param { boolean } is_bot - is user a bot
 	 *
@@ -58,7 +58,7 @@ export interface CharacterInterface {
 	 * Character Interface
 	 * =====================
 	 *
-	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
 	 *
 	 * @param { string } first_name - user name from telegram
 	 *
@@ -68,7 +68,7 @@ export interface CharacterInterface {
 	 * Character Interface
 	 * =====================
 	 *
-	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
 	 *
 	 * @param { string } username - user username from telegram
 	 *
@@ -78,7 +78,7 @@ export interface CharacterInterface {
 	 * Character Interface
 	 * =====================
 	 *
-	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
 	 *
 	 * @param { string } character_name - user character name
 	 *
@@ -88,7 +88,7 @@ export interface CharacterInterface {
 	 * Character Interface
 	 * =====================
 	 *
-	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
 	 *
 	 * @param { string } language_code - user code language from OS
 	 *
@@ -98,7 +98,7 @@ export interface CharacterInterface {
 	 * Character Interface
 	 * =====================
 	 *
-	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
 	 *
 	 * @param { string } role - character role
 	 *
@@ -108,7 +108,7 @@ export interface CharacterInterface {
 	 * Character Interface
 	 * =====================
 	 *
-	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
 	 *
 	 * @param { number } attack - character attack power
 	 *
@@ -118,7 +118,7 @@ export interface CharacterInterface {
 	 * Character Interface
 	 * =====================
 	 *
-	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
 	 *
 	 * @param { number } defence - character defence power
 	 *
@@ -128,7 +128,7 @@ export interface CharacterInterface {
 	 * Character Interface
 	 * =====================
 	 *
-	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
 	 *
 	 * @param { number } health - character health
 	 *
@@ -138,7 +138,7 @@ export interface CharacterInterface {
 	 * Character Interface
 	 * =====================
 	 *
-	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
 	 *
 	 * @param { number } mana - character mana
 	 *
@@ -148,7 +148,7 @@ export interface CharacterInterface {
 	 * Character Interface
 	 * =====================
 	 *
-	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
 	 *
 	 * @param { number } experience - character experience
 	 *
@@ -158,7 +158,7 @@ export interface CharacterInterface {
 	 * Character Interface
 	 * =====================
 	 *
-	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
 	 *
 	 * @param { number } group_id - users group id
 	 *
@@ -168,7 +168,7 @@ export interface CharacterInterface {
 	 * Character Interface
 	 * =====================
 	 *
-	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
 	 *
 	 * @param { number } message_thread_id - thread id if group is a topic
 	 *
@@ -178,7 +178,7 @@ export interface CharacterInterface {
 	 * Character Interface
 	 * =====================
 	 *
-	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
 	 *
 	 * @param { string } step - step of create character
 	 *

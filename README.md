@@ -1,12 +1,12 @@
-# 🤖 rpg-monster-telegram-game-bot
+# 🤖 rpg-dndev-telegram-game-bot
 
 <!-- all-shields/header-badges:START -->
 
-[![v0.0.1-nightly.0](https://img.shields.io/badge/version-v0.0.1--nightly.0-lightgray.svg?style=flat&logo=)](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/CHANGELOG.md) [![](https://img.shields.io/npm/v/@ptkdev/rpg-monster-telegram-game-bot?color=CC3534&logo=npm)](https://www.npmjs.com/package/@ptkdev/rpg-monster-telegram-game-bot) [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat&logo=license)](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/LICENSE.md) [![Language: TypeScript](https://img.shields.io/badge/language-typescript-blue.svg?style=flat&logo=typescript)](https://www.typescriptlang.org/) [![Framework: Grammy](https://img.shields.io/badge/powered%20by-grammy-009dca.svg?style=flat&logo=telegram)](https://grammy.dev/) [![ECMAScript: 2019](https://img.shields.io/badge/ES-9-F7DF1E.svg?style=flat&logo=javascript)](https://github.com/tc39/ecma262) [![Discord Server](https://discordapp.com/api/guilds/383373985666301975/embed.png)](https://discord.ptkdev.io)
+[![v0.0.1-nightly.0](https://img.shields.io/badge/version-v0.0.1--nightly.0-lightgray.svg?style=flat&logo=)](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/CHANGELOG.md) [![](https://img.shields.io/npm/v/@ptkdev/rpg-dndev-telegram-game-bot?color=CC3534&logo=npm)](https://www.npmjs.com/package/@ptkdev/rpg-dndev-telegram-game-bot) [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat&logo=license)](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/LICENSE.md) [![Language: TypeScript](https://img.shields.io/badge/language-typescript-blue.svg?style=flat&logo=typescript)](https://www.typescriptlang.org/) [![Framework: Grammy](https://img.shields.io/badge/powered%20by-grammy-009dca.svg?style=flat&logo=telegram)](https://grammy.dev/) [![ECMAScript: 2019](https://img.shields.io/badge/ES-9-F7DF1E.svg?style=flat&logo=javascript)](https://github.com/tc39/ecma262) [![Discord Server](https://discordapp.com/api/guilds/383373985666301975/embed.png)](https://discord.ptkdev.io)
 
 <!-- all-shields/header-badges:END -->
 
-RPG Monster Game Bot for Telegram Groups, play with friends!
+RPG Dungeons and Developer is a Telegram Game Bot for Groups, play with friends!
 
 ## 🎁 Support: Donate
 
@@ -30,20 +30,18 @@ RPG Monster Game Bot for Telegram Groups, play with friends!
 -   -   🚀 [Deploy](#-deploy)
 -   📚 [Documentation](#-documentation)
 -   👨‍💻 [Contributing](#-contributing)
--   🐛 [Known Bugs](https://github.com/ptkdev/rpg-monster-telegram-game-bot/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
--   🍻 Community:
-    -   <img src="https://raw.githubusercontent.com/ptkdev/rpg-monster-telegram-game-bot/main/.github/assets/social_telegram.png" height="18px"> Telegram ([🇬🇧 English](https://t.me/QuizQuickAnswerGroup) | [🇮🇹 Italian](https://t.me/QuizQuickAnswerGroupITA))
+-   🐛 [Known Bugs](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
 
 ## 💡 Features
 
 -   [✔️] Easy to use
 -   [✔️] MIT License
 -   [✔️] Powered by Grammy Telegram API Framework
--   [✔️] RPG Monster Game Bot for Telegram Groups, play with friends!
+-   [✔️] RPG Dungeons and Developer Game Bot for Telegram Groups, play with friends!
 
 ## 👔 Screenshot
 
-[![rpg-monster-telegram-game-bot](https://raw.githubusercontent.com/ptkdev/rpg-monster-telegram-game-bot/main/.github/assets/screenshot.png)](https://raw.githubusercontent.com/ptkdev/rpg-monster-telegram-game-bot/main/.github/assets/screenshot.png)
+[![rpg-dndev-telegram-game-bot](https://raw.githubusercontent.com/ptkdev/rpg-dndev-telegram-game-bot/main/.github/assets/screenshot.png)](https://raw.githubusercontent.com/ptkdev/rpg-dndev-telegram-game-bot/main/.github/assets/screenshot.png)
 
 ## 🚀 Installation
 
@@ -56,32 +54,26 @@ RPG Monster Game Bot for Telegram Groups, play with friends!
 
 1. TODO
 
-## ⏱ Official Group
-
-If you have no telegram groups of friends you can play in the official one, you will find new friends and kind people:
-
--   [🇬🇧 English](https://t.me/QuizQuickAnswerGroup)
--   [🇮🇹 Italian](https://t.me/QuizQuickAnswerGroupITA)
-
 ## 🔨 Developer Mode
 
 #### 🏁 Run Project
 
-1. Clone this repository or download [nightly](https://github.com/ptkdev/rpg-monster-telegram-game-bot/archive/nightly.zip), [beta](https://github.com/ptkdev/rpg-monster-telegram-game-bot/archive/beta.zip) or [stable](https://github.com/ptkdev/rpg-monster-telegram-game-bot/archive/main.zip).
+1. Clone this repository or download [nightly](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/archive/nightly.zip), [beta](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/archive/beta.zip) or [stable](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/archive/main.zip).
 2. Write to [@botfather](https://t.me/botfather) on telegram and create new bot (save token and set bot username)
 3. Set bot token: `export BOT_TOKEN=1234:asdfghjkl`
-4. Set mongodb connection url: `export MONGODB=mongodb://localhost:27017/quizquickanswerdb`
-5. Run `npm install`
-6. Run `npm run dev`
-7. Write `/start` on telegram bot.
+4. Set mongodb connection url: `export MONGODB=mongodb://localhost:27017/rpgdb`
+5. Run `brew install pkg-config cairo pango libpng jpeg giflib librsvg pixman python3 && xcode-select --install` (macOS)
+6. Run `npm ci`
+7. Run `npm run dev`
+8. Write `/start` on telegram bot.
 
 #### 🚀 Deploy
 
 Deploy bot to your server and:
 
 1. Set bot token: `export BOT_TOKEN=1234:asdfghjkl`
-2. Set mongodb connection url: `export MONGODB=mongodb://localhost:27017/quizquickanswerdb`
-3. Run init npm install
+2. Set mongodb connection url: `export MONGODB=mongodb://localhost:27017/rpgdb`
+3. Run init `npm ci`
 4. Generate release `npm run release`
 5. Start bot `npm run start-pm2`
 
@@ -107,8 +99,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="16.66%"><a href="https://ptk.dev"><img src="https://avatars1.githubusercontent.com/u/442844?v=4?s=100" width="100px;" alt="Patryk Rzucidło"/><br /><sub><b>Patryk Rzucidło</b></sub></a><br /><a href="https://github.com/ptkdev/ptkdev/rpg-monster-telegram-game-bot/commits?author=ptkdev" title="Code">💻</a> <a href="#translation-ptkdev" title="Translation">🌍</a> <a href="https://github.com/ptkdev/ptkdev/rpg-monster-telegram-game-bot/commits?author=ptkdev" title="Documentation">📖</a> <a href="https://github.com/ptkdev/ptkdev/rpg-monster-telegram-game-bot/issues?q=author%3Aptkdev" title="Bug reports">🐛</a></td>
-      <td align="center" valign="top" width="16.66%"><img src="https://avatars1.githubusercontent.com/u/50172746?v=4?s=100" width="100px;" alt="Alì Shadman"/><br /><sub><b>Alì Shadman</b></sub><br /><a href="https://github.com/ptkdev/ptkdev/rpg-monster-telegram-game-bot/commits?author=AliShadman95" title="Code">💻</a> <a href="#translation-AliShadman95" title="Translation">🌍</a> <a href="https://github.com/ptkdev/ptkdev/rpg-monster-telegram-game-bot/commits?author=AliShadman95" title="Documentation">📖</a> <a href="https://github.com/ptkdev/ptkdev/rpg-monster-telegram-game-bot/issues?q=author%3AAliShadman95" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://ptk.dev"><img src="https://avatars1.githubusercontent.com/u/442844?v=4?s=100" width="100px;" alt="Patryk Rzucidło"/><br /><sub><b>Patryk Rzucidło</b></sub></a><br /><a href="https://github.com/ptkdev/ptkdev/rpg-dndev-telegram-game-bot/commits?author=ptkdev" title="Code">💻</a> <a href="#translation-ptkdev" title="Translation">🌍</a> <a href="https://github.com/ptkdev/ptkdev/rpg-dndev-telegram-game-bot/commits?author=ptkdev" title="Documentation">📖</a> <a href="https://github.com/ptkdev/ptkdev/rpg-dndev-telegram-game-bot/issues?q=author%3Aptkdev" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="16.66%"><img src="https://avatars1.githubusercontent.com/u/50172746?v=4?s=100" width="100px;" alt="Alì Shadman"/><br /><sub><b>Alì Shadman</b></sub><br /><a href="https://github.com/ptkdev/ptkdev/rpg-dndev-telegram-game-bot/commits?author=AliShadman95" title="Code">💻</a> <a href="#translation-AliShadman95" title="Translation">🌍</a> <a href="https://github.com/ptkdev/ptkdev/rpg-dndev-telegram-game-bot/commits?author=AliShadman95" title="Documentation">📖</a> <a href="https://github.com/ptkdev/ptkdev/rpg-dndev-telegram-game-bot/issues?q=author%3AAliShadman95" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
