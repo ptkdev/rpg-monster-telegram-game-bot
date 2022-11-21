@@ -27,7 +27,6 @@
  * @param { number } defense - character defense power
  * @param { number } health - character health
  * @param { number } mana - character mana
- * @param { number } level - character level
  * @param { number } experience - character experience
  * @param { number } group_id - group id
  * @param { number } message_thread_id - thread id if group is a topic
@@ -145,16 +144,6 @@ export interface CharacterInterface {
 	 *
 	 */
 	mana: number;
-	/**
-	 * Character Interface
-	 * =====================
-	 *
-	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-monster-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
-	 *
-	 * @param { number } level - character level
-	 *
-	 */
-	level: number;
 	/**
 	 * Character Interface
 	 * =====================

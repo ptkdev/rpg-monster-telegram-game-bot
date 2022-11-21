@@ -53,7 +53,7 @@
 	"new_character_group": "To create a new character, write a private message to @{{bot_username}} (click on the nickname) and follow the instruction.",
 	"new_character_private": "Welcome to the creation of your new character. Write down the name of your character, for exemple:\n\n<code>Patryk</code>\n\n",
 	"new_character_already_exist": "You already have a character! To see it, write /pg.",
-	"new_character_no_username": "You can't create a character because you don't have a Telegram username. Please set a username: go to Telegram settings, click on edit and write your @nickname!",
+	"new_character_no_username": "You can't create/see a character because you don't have a Telegram username. Please set a username: go to Telegram settings, click on edit and write your @nickname!",
 	"set_command_done": "🚀 Done! Try using <code>/pg @{{username}}</code> to see your character!",
 	"set_command_picture": "Send an image to use as avatar for your character. (Max size 20MB)",
 	"set_command_photo_size": "The image is too big! Send an image with a size less than 20MB.",
@@ -63,5 +63,6 @@
 	"set_select_button": "Choose the button you want to change:",
 	"character_command_button_name": "👤 Name",
 	"character_command_button_avatar": "👤 Avatar",
-	"character_command_button_role": "👤 Role"
+	"character_command_button_role": "👤 Role",
+	"generate_card_role_label": "Role"
 }

@@ -15,6 +15,7 @@ import type { Context, RawApi } from "grammy";
 import type { CharacterInterface } from "@app/types/character.interfaces";
 import type { SettingsInterface } from "@app/types/settings.interfaces";
 import { Other } from "grammy/out/core/api";
+import { InputFile } from "grammy";
 
 const getUsername = (ctx: Context): string => {
 	const username = ctx?.update?.message?.from?.username;
@@ -56,7 +57,6 @@ const getFullUser = (ctx: Context): CharacterInterface => {
 	from.defence = 0;
 	from.health = 0;
 	from.mana = 0;
-	from.level = 1;
 	from.experience = 0;
 	from.group_id = getChatID(ctx);
 	from.message_thread_id = getThreadID(ctx);
@@ -170,7 +170,7 @@ const send = async (
 const sendPhoto = async (
 	ctx: Context,
 	group_id: number,
-	photo: string,
+	photo: string | InputFile,
 	options: any = { parse_mode: "HTML" },
 ): Promise<Context["message"]> => {
 	if (group_id && photo) {
