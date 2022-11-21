@@ -56,7 +56,7 @@ const getFullUser = (ctx: Context): CharacterInterface => {
 	from.defence = 0;
 	from.health = 0;
 	from.mana = 0;
-	from.level = 0;
+	from.level = 1;
 	from.experience = 0;
 	from.group_id = getChatID(ctx);
 	from.message_thread_id = getThreadID(ctx);

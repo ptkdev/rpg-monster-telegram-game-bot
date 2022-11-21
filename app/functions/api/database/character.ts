@@ -100,7 +100,7 @@ const get = async (search: Record<string, number | string | boolean>): Promise<C
 			}
 		});
 
-		return (await character) || new query().toJSON();
+		return (await character.lean()) || new query().toJSON();
 	} catch (error: unknown) {
 		logger.error(JSON.stringify(error || ""), "character.ts:get()");
 	}

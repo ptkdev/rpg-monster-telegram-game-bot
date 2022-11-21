@@ -14,8 +14,8 @@ import translate from "@translations/translate";
 import db from "@routes/api/database";
 import telegram from "@routes/api/telegram";
 import logger from "@app/functions/utils/logger";
-import { getAndSaveImage } from "@app/functions/utils/get_and_save_image";
-
+import { saveImage } from "@app/functions/utils/save_image";
+import { setRole } from "@app/functions/utils/set_role";
 import type { CharacterInterface } from "@app/types/character.interfaces";
 
 /**
@@ -52,7 +52,7 @@ const hearsPhoto = async (): Promise<void> => {
 							return;
 						}
 
-						await getAndSaveImage(photoInfo?.file_path, character.id.toString());
+						await saveImage(photoInfo?.file_path, character.id.toString());
 
 						if (character.step.toString() === "set_picture") {
 							character.step = "done";
@@ -97,44 +97,10 @@ const hearsPhoto = async (): Promise<void> => {
 	});
 };
 
-bot.callbackQuery("dps", async (ctx) => {
-	logger.info("callbackQuery: dps", "hearsphoto.ts:on(dps)");
-	await setRole(ctx, "dps");
+bot.callbackQuery(["dps", "tank", "healer"], async (ctx) => {
+	logger.info("callbackQuery: dps/tank/healer", "hearsphoto.ts:on(dps/tank/healer)");
+	await setRole(ctx, telegram.api.message.getActionType(ctx));
 });
-bot.callbackQuery("tank", async (ctx) => {
-	logger.info("callbackQuery: tank", "hearsphoto.ts:on(tank)");
-	await setRole(ctx, "tank");
-});
-bot.callbackQuery("healer", async (ctx) => {
-	logger.info("callbackQuery: healer", "hearsphoto.ts:on(healer)");
-	await setRole(ctx, "healer");
-});
-
-const setRole = async (ctx: any, role: string): Promise<void> => {
-	logger.info("setRole", "hearsphoto.ts:on(setRole)");
-
-	const character: CharacterInterface = await db.character.get({
-		username: telegram.api.message.getUsernameFromAction(ctx),
-	});
-	const lang = character.language_code;
-
-	character.role = role;
-	character.step = "done";
-
-	await db.character.update({ id: character.id }, character);
-	await telegram.api.message.send(
-		ctx,
-		telegram.api.message.getChatID(ctx),
-		translate(lang || "it", "set_command_done", {
-			username: telegram.api.message.getUsernameFromAction(ctx),
-		}),
-	);
-
-	// Rimuove i bottoni
-	await telegram.api.message.editMessageReplyMarkup(ctx, {
-		reply_markup: new InlineKeyboard(),
-	});
-};
 
 export { hearsPhoto };
 export default hearsPhoto;

@@ -57,5 +57,11 @@
 	"set_command_done": "🚀 Done! Try using <code>/pg @{{username}}</code> to see your character!",
 	"set_command_picture": "Send an image to use as avatar for your character. (Max size 20MB)",
 	"set_command_photo_size": "The image is too big! Send an image with a size less than 20MB.",
-	"set_command_role": "Choose the role of your character:"
+	"set_command_role": "Choose the role of your character:",
+	"set_command_name": "Choose the name of your character:",
+	"command_in_group": "This command is only available in private chat with the bot.",
+	"set_select_button": "Choose the button you want to change:",
+	"character_command_button_name": "👤 Name",
+	"character_command_button_avatar": "👤 Avatar",
+	"character_command_button_role": "👤 Role"
 }

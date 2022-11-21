@@ -54,5 +54,11 @@
 	"set_command_done": "🚀 Hai finito! Prova ad usare il comando <code>/pg @{{username}}</code> per vedere il tuo personaggio!",
 	"set_command_picture": "Manda un immagine da usare come avatar del tuo personaggio. (Dimensione massima 20MB)",
 	"set_command_photo_size": "L'immagine è troppo grande! Devi mandare un immagine con dimensioni inferiori a 20MB.",
-	"set_command_role": "Scegli il ruolo del tuo personaggio:"
+	"set_command_role": "Scegli il ruolo del tuo personaggio:",
+	"set_command_name": "Scegli il nome del tuo personaggio:",
+	"command_in_group": "Questo comando non è disponibile in un gruppo!",
+	"set_select_button": "Scegli il bottone che vuoi modificare:",
+	"character_command_button_name": "👤 Nome",
+	"character_command_button_avatar": "👤 Avatar",
+	"character_command_button_role": "👤 Ruolo"
 }

@@ -1,11 +1,6 @@
 import start from "@app/functions/commands/start";
 import master from "@app/functions/commands/master";
-import score from "@app/functions/commands/score";
 import groups from "@app/functions/commands/groups";
-import ping from "@app/functions/commands/ping";
-import show from "@app/functions/commands/show";
-import top10 from "@app/functions/commands/top10";
-import topYearly from "@app/functions/commands/top_yearly";
 import launch from "@app/functions/commands/launch";
 import hears from "@app/functions/commands/hears";
 import hearsPhoto from "@app/functions/commands/hearsphoto";
@@ -13,16 +8,12 @@ import settings from "@app/functions/commands/settings";
 import actions from "@app/functions/commands/actions";
 import version from "@app/functions/commands/version";
 import new_character from "@app/functions/commands/new_character";
+import set from "@app/functions/commands/set";
 
 const commands = {
 	start,
 	master,
-	score,
 	groups,
-	ping,
-	show,
-	top10,
-	topYearly,
 	launch,
 	hears,
 	settings,
@@ -30,23 +21,8 @@ const commands = {
 	actions,
 	version,
 	new_character,
+	set,
 };
 
-export {
-	start,
-	master,
-	score,
-	groups,
-	ping,
-	show,
-	top10,
-	topYearly,
-	launch,
-	hears,
-	settings,
-	hearsPhoto,
-	actions,
-	version,
-	new_character,
-};
+export { start, master, groups, launch, hears, settings, hearsPhoto, actions, version, new_character, set };
 export default commands;
