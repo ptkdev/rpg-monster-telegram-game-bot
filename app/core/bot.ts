@@ -21,6 +21,9 @@ import logger from "@app/functions/utils/logger";
 	await commands.new_character();
 	await commands.set();
 	await commands.pg();
+	await commands.version();
+	await commands.hears();
+	await commands.hearsPhoto();
 
 	await commands.launch();
 })();
