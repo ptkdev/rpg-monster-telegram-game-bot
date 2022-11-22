@@ -25,6 +25,7 @@ const schema = new Schema<CharacterInterface>({
 	defence: { type: Number, default: 0 },
 	health: { type: Number, default: 0 },
 	mana: { type: Number, default: 0 },
+	items: { type: Object, default: { potion: 0, superPotion: 0, resurrectionStone: 0 } },
 	experience: { type: Number, default: 0 },
 	group_id: { type: String, default: "0" },
 	message_thread_id: { type: Number, default: 0 },

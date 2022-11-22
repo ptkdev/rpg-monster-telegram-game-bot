@@ -27,6 +27,7 @@
  * @param { number } defense - character defense power
  * @param { number } health - character health
  * @param { number } mana - character mana
+ * @param { ItemsCharacterInterface } items - character items
  * @param { number } experience - character experience
  * @param { number } group_id - group id
  * @param { number } message_thread_id - thread id if group is a topic
@@ -150,6 +151,16 @@ export interface CharacterInterface {
 	 *
 	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
 	 *
+	 * @param { ItemsCharacterInterface } items - character items
+	 *
+	 */
+	items: ItemsCharacterInterface;
+	/**
+	 * Character Interface
+	 * =====================
+	 *
+	 * @interface [CharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 *
 	 * @param { number } experience - character experience
 	 *
 	 */
@@ -184,4 +195,48 @@ export interface CharacterInterface {
 	 *
 	 */
 	step: string;
+}
+/**
+ * Items Character Interface
+ * =====================
+ *
+ *
+ * @interface [ItemsCharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+ *
+ * @param { number } potion - normal potion quantity
+ * @param { number } superPotion - super potion quantity
+ * @param { number } resurrectionStone - resurrection stone quantity
+ *
+ */
+export interface ItemsCharacterInterface {
+	/**
+	 * Items Character Interface
+	 * =====================
+	 *
+	 * @interface [ItemsCharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 *
+	 * @param { number } potion -  normal potion quantity
+	 *
+	 */
+	potion: number;
+	/**
+	 * Items Character Interface
+	 * =====================
+	 *
+	 * @interface [ItemsCharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 *
+	 * @param { number } superPotion - super potion quantity
+	 *
+	 */
+	superPotion: number;
+	/**
+	 * Items Character Interface
+	 * =====================
+	 *
+	 * @interface [ItemsCharacterInterface](https://github.com/ptkdev/rpg-dndev-telegram-game-bot/blob/main/app/webcomponent/types/character.interfaces.ts)
+	 *
+	 * @param { number } resurrectionStone - resurrection stone quantity
+	 *
+	 */
+	resurrectionStone: number;
 }

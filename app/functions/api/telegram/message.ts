@@ -58,6 +58,7 @@ const getFullUser = (ctx: Context): CharacterInterface => {
 	from.health = 0;
 	from.mana = 0;
 	from.experience = 0;
+	from.items = { potion: 0, superPotion: 0, resurrectionStone: 0 };
 	from.group_id = getChatID(ctx);
 	from.message_thread_id = getThreadID(ctx);
 	from.step = "done";
