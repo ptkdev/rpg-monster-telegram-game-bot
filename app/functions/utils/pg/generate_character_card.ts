@@ -106,28 +106,28 @@ const getColorByRole = (role: string | undefined): ColorsInterface => {
 		case "dps":
 		default:
 			return {
-				gradientColor1: "#ff0000",
-				gradientColor2: "#0a0a0a",
-				color1: "#ff0000",
-				color2: "#0a0a0a",
-				color3: "#ff0000",
+				gradientColor1: "#6e00ff",
+				gradientColor2: "#8e48c7",
+				color1: "#ffffff",
+				color2: "#000000",
+				color3: "#02d032",
 			};
 		case "tank":
 			return {
-				gradientColor1: "#00ff00",
-				gradientColor2: "#0a0a0a",
-				color1: "#00ff00",
-				color2: "#0a0a0a",
-				color3: "#00ff00",
+				gradientColor1: "#6e00ff",
+				gradientColor2: "#8e48c7",
+				color1: "#ffffff",
+				color2: "#000000",
+				color3: "#02d032",
 			};
 
 		case "healer":
 			return {
-				gradientColor1: "#0000ff",
-				gradientColor2: "#0a0a0a",
-				color1: "#0000ff",
-				color2: "#0a0a0a",
-				color3: "#0000ff",
+				gradientColor1: "#6e00ff",
+				gradientColor2: "#8e48c7",
+				color1: "#ffffff",
+				color2: "#000000",
+				color3: "#02d032",
 			};
 	}
 };
@@ -144,7 +144,7 @@ const generateBackground = async (ctx: any, { gradientColor1, gradientColor2 }: 
 
 const generateText = (
 	ctx,
-	{ character_name, role, experience, username, language_code }: CharacterInterface,
+	{ character_name, role, experience, username, language_code, attack, defence, mana, health }: CharacterInterface,
 	{ color1, color2, color3 }: ColorsInterface,
 	currentLevelIndex: number,
 ): void => {
@@ -160,9 +160,10 @@ const generateText = (
 	ctx.font = "40px InterBold";
 	ctx.fillStyle = color1;
 
-	const levelLabelWidth = ctx.measureText("LEVEL").width;
+	const translatedLevelLabel = translate(language_code || "it", "generate_card_level_label");
+	const levelLabelWidth = ctx.measureText(translatedLevelLabel).width;
 
-	ctx.fillText("LEVEL", 1270 - numberLevelWidth - levelLabelWidth - 10, 110);
+	ctx.fillText(translatedLevelLabel, 1270 - numberLevelWidth - levelLabelWidth - 10, 110);
 
 	// Aggiunge il ruolo
 	ctx.font = "70px InterBold";
@@ -176,10 +177,10 @@ const generateText = (
 	ctx.font = "40px InterBold";
 	ctx.fillStyle = color2;
 
-	const label = translate(language_code || "it", "generate_card_role_label");
-	const rankLabelWidth = ctx.measureText(label).width;
+	const translatedRankLabel = translate(language_code || "it", "generate_card_role_label");
+	const rankLabelWidth = ctx.measureText(translatedRankLabel).width;
 
-	ctx.fillText(label, 1270 - numberLevelWidth - levelLabelWidth - roleWidth - rankLabelWidth - 60, 110);
+	ctx.fillText(translatedRankLabel, 1270 - numberLevelWidth - levelLabelWidth - roleWidth - rankLabelWidth - 60, 110);
 
 	// /////////// /////////
 
@@ -210,6 +211,71 @@ const generateText = (
 	const currentXpWidth = ctx.measureText(experience).width;
 
 	ctx.fillText(experience, 1260 - xpNeededWidth - currentXpWidth - 20, 250);
+
+	// Aggiunge la label per la stat attacco
+	ctx.font = "58px InterBold";
+	ctx.fillStyle = color2;
+
+	const translatedAttackLabel = translate(language_code || "it", "generate_card_attack_label");
+	const attackLabelWidth = ctx.measureText(translatedAttackLabel).width;
+
+	ctx.fillText(translatedAttackLabel, 40, 500);
+
+	// Aggiunge l'attacco
+	ctx.font = "58px InterBold";
+	ctx.fillStyle = color1;
+
+	ctx.fillText(attack.toString(), 40 + attackLabelWidth + 20, 500);
+
+	// Aggiunge la vita
+	ctx.font = "58px InterBold";
+	ctx.fillStyle = color1;
+
+	const healthWidth = ctx.measureText(health.toString()).width;
+
+	ctx.fillText(health.toString(), 1260 - healthWidth, 500);
+
+	// Aggiunge la label per la stat vita
+	ctx.font = "58px InterBold";
+	ctx.fillStyle = color2;
+
+	const translatedHealthLabel = translate(language_code || "it", "generate_card_health_label");
+	const healthLabelWidth = ctx.measureText(translatedHealthLabel).width;
+
+	ctx.fillText(translatedHealthLabel, 1260 - healthWidth - healthLabelWidth - 20, 500);
+
+	// NUOVA RIGA
+
+	// Aggiunge la label per la stat difesa
+	ctx.font = "58px InterBold";
+	ctx.fillStyle = color2;
+
+	const translatedDefenceLabel = translate(language_code || "it", "generate_card_defence_label");
+	const defenceLabelWidth = ctx.measureText(translatedDefenceLabel).width;
+
+	ctx.fillText(translatedDefenceLabel, 40, 600);
+
+	// Aggiunge la difesa
+	ctx.font = "58px InterBold";
+	ctx.fillStyle = color1;
+
+	ctx.fillText(defence.toString(), 40 + defenceLabelWidth + 20, 600);
+
+	// Aggiunge il mana
+	ctx.font = "58px InterBold";
+	ctx.fillStyle = color1;
+
+	const manaWidth = ctx.measureText(mana.toString()).width;
+
+	ctx.fillText(mana.toString(), 1260 - manaWidth, 600);
+
+	// Aggiunge la label per la stat mana
+	ctx.font = "58px InterBold";
+	ctx.fillStyle = color2;
+
+	const manaLabelWidth = ctx.measureText("Mana:").width;
+
+	ctx.fillText("Mana:", 1260 - manaWidth - manaLabelWidth - 20, 600);
 };
 
 const generateProgressBar = (
@@ -248,7 +314,7 @@ const generateProgressBar = (
 const generateAvatar = async (ctx, c, { id }: CharacterInterface): Promise<void> => {
 	const circle = {
 		x: c.width / 7,
-		y: c.height / 2,
+		y: c.height / 4,
 		radius: 140,
 	};
 
@@ -269,7 +335,7 @@ const generateAvatar = async (ctx, c, { id }: CharacterInterface): Promise<void>
 
 const generateCard = async (character: CharacterInterface): Promise<Buffer> => {
 	// Create canvas
-	const c = canvas.createCanvas(1342, 400);
+	const c = canvas.createCanvas(1342, 650);
 	const ctx = c.getContext("2d");
 
 	const currentLevelIndex =

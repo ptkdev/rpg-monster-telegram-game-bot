@@ -19,5 +19,9 @@
 	"character_command_button_name": "👤 Name",
 	"character_command_button_avatar": "👤 Avatar",
 	"character_command_button_role": "👤 Role",
-	"generate_card_role_label": "Role"
+	"generate_card_role_label": "ROLE",
+	"generate_card_level_label": "LEVEL",
+	"generate_card_attack_label": "Attack:",
+	"generate_card_defence_label": "Defence:",
+	"generate_card_health_label": "Health:"
 }
